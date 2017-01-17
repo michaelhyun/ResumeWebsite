@@ -25,8 +25,8 @@ h6 {
 }
 
 h1 {
-  font-size: 40px;
-  color: #f5a623;
+  font-size: 60px;
+  color: #f0ffff;
   line-height: 48px;
   display: inline;
 }
@@ -169,6 +169,8 @@ img {
 
 span {
   padding: 5px;
+  color: #00ced1;
+
 }
 
 #lets-connect {
