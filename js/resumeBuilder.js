@@ -19,28 +19,76 @@ var bio = {
 	},
 	"picture" : HTMLbioPic.replace("%data%", "images/self.jpg"),
 	"welcomeMessage" : HTMLwelcomeMsg.replace("%data%", welcomeMessage),
-	"skills" : HTMLskills.replace("%data%", skills)
+	"skills" : HTMLskills.replace("%data%", skills.join(", "))
 };
 
-var jobs = ["Software Engineering in Test, Intern", "Server"]
+
+var work = {
+	"jobs" : [
+	{
+		"employer" : HTMLworkEmployer.replace("%data%", "NASA Ames Research Center"),
+		"title" : HTMLworkTitle.replace("%data%", "Software Engineering in Test, Intern"),
+		"dates" : HTMLworkDates.replace("%data%", "September 2016 - December 2016"),
+		"location" : HTMLworkLocation.replace("%data%", "Moffet Field Research Center, Mountain View, CA"),
+		"description" : HTMLworkDescription.replace("%data%", "hello")
+	},
+	{
+		"employer" : HTMLworkEmployer.replace("%data%", "All That Barbeque"),
+		"title" : HTMLworkTitle.replace("%data%", "Server"),
+		"dates" : HTMLworkDates.replace("%data%", "June 2015 - October 2015"),
+		"location" : HTMLworkLocation.replace("%data%", "Cupertino, CA"),
+		// "description" : HTMLworkDescription.replace("%data%", "hello")
+	}
+	]
+}
 
 
-var work = {}
-work.jobs = HTMLworkTitle.replace("%data%", jobs);
-work.dates = HTMLworkDates.replace("%data%", "September 2016 - December 2016");
-work.employer = HTMLworkEmployer.replace("%data%", "NASA Ames Research Center");
-work.location = HTMLworkLocation.replace("%data%", "Moffet Field Research Center, Mountain View, CA");
-work.description = HTMLworkDescription.replace("%data%", "hello");
-//DESCRIPTION FILL IN
+var projects = {
+	"projects" : [
+		{
+			"name" : HTMLprojectTitle.replace("%data%", "Clubhub"),
+			"dates" : HTMLprojectDates.replace("%data", "January 2016 - June 2016"),
+			"description" : HTMLprojectDescription.replace("%data%", ""),
+			//FILL IN DESCRIPTION
+			"image" : HTMLprojectImage.replace("%data%", "")
+			//FILL IN IMAGES
+		},
+		{
+			"name" : HTMLprojectTitle.replace("%data%", "Java Swing Whitebaord GUI"),
+			"dates" : HTMLprojectDates.replace("%data", "November 2016 - December 2016"),
+			"description" : HTMLprojectDescription.replace("%data%", ""),
+			//FILL IN DESCRIPTION
+			"image" : HTMLprojectImage.replace("%data%", "")
+			//FILL IN IMAGES
+		},
+		{
+			"name" : HTMLprojectTitle.replace("%data%", "Robot Project"),
+			"dates" : HTMLprojectDates.replace("%data", "November 2014 - December 2014"),
+			"description" : HTMLprojectDescription.replace("%data%", ""),
+			//FILL IN DESCRIPTION
+			"image" : HTMLprojectImage.replace("%data%", "")
+			//FILL IN IMAGES
+		},
+		{
+			"name" : HTMLprojectTitle.replace("%data%", "Library WebApp"),
+			"dates" : HTMLprojectDates.replace("%data", "November 2015 - December 2015"),
+			"description" : HTMLprojectDescription.replace("%data%", ""),
+			//FILL IN DESCRIPTION
+			"image" : HTMLprojectImage.replace("%data%", "")
+			//FILL IN IMAGES
+		}
+	]
 
+}
 
+var education = {
+	"school" : HTMLschoolName.replace("%data%", "San Jose State University"),
+	"degree" : HTMLschoolDegree.replace("%data%", "BSSE"),
+	"dates" : HTMLschoolDates.replace("%data%", "August 2014 - May 2018 (Expected)"),
+	"location" : HTMLschoolLocation.replace("%data%", "San Jose, CA 95112"),
+	"major" : HTMLschoolMajor.replace("%data%", "Software Engineering BSSE")
+}
 
-var education = {}
-education["school"] = HTMLschoolName.replace("%data%", "San Jose State University"),
-education["degree"] = HTMLschoolDegree.replace("%data%", "BSSE");
-education["dates"] = HTMLschoolDates.replace("%data%", "August 2014 - May 2018 (Expected)");
-education["location"] = HTMLschoolLocation.replace("%data%", "San Jose, CA 95112");
-education["major"] = HTMLschoolMajor.replace("%data%", "Software Engineering BSSE");
 
  $("#header").append(bio.name);
  $("#header").append(bio.role);
@@ -54,8 +102,18 @@ $("#header").append(bio.skills);
 $("#workExperience").append(HTMLworkStart);
 $("#workExperience").append(work.jobs);
 
+$("#projects").append(HTMLprojectStart);
+$("#projects").append(projects.projects);
+
+
 $("#education").append(HTMLschoolStart);
 $("#education").append(education.school);
+
+
+// $("#mapDiv").append(googleMap);
+// $("#mapDiv").append(internationalizeButton);
+
+
 
 
 
